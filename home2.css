@@ -1,0 +1,371 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Montserrat" !important;
+  font-size: 14px;
+  color: #fff;
+  overflow: hidden;
+  display: flex;
+}
+
+.left,
+.right {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+}
+
+.left {
+  background: linear-gradient(to right, #ff4b2b, #ff416c);
+}
+
+.right {
+  left: 50%;
+  background: #fff;
+}
+
+.left-strip {
+  position: absolute;
+  width: 1px;
+  height: 100vh;
+  background: #fff;
+  left: 120px;
+  opacity: 0.5;
+}
+
+.right-strip {
+  position: absolute;
+  width: 1px;
+  height: 100vh;
+  background: #fff;
+  right: 120px;
+  opacity: 0.5;
+}
+
+.nav {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+}
+
+.logo,
+.menu,
+.categories,
+.search,
+.bag {
+  position: absolute;
+  padding: 10px;
+  margin-top: 10px;
+}
+.logo a {
+  text-decoration: none;
+  color: #fff;
+}
+.logo {
+  left: 20px;
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.logo .reg {
+  font-size: 14px;
+  vertical-align: super;
+}
+
+.menu {
+  left: 150px;
+  line-height: 1.2;
+  font-size: 20px;
+}
+
+.search,
+.bag {
+  background: #fff;
+  color: #ff4b2b;
+  border-radius: 50%;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  margin-top: 18px;
+}
+
+.search {
+  right: 180px;
+}
+
+.bag {
+  right: 40px;
+}
+
+.categories {
+  left: 50%;
+  top: 30%;
+  transform: translate(-50%, -50%);
+  border: 2px solid #fff;
+  border-radius: 50px;
+  background: #fff;
+  color: #ff4b2b;
+  font-weight: 500;
+}
+
+.categories ul {
+  list-style: none;
+}
+
+.categories ul li {
+  display: inline-block;
+  padding: 5px 20px;
+}
+
+.media {
+  position: absolute;
+  left: -100px;
+  top: 50%;
+  transform: rotate(-90deg);
+}
+
+.media ul a {
+  list-style: none;
+}
+
+.media ul li {
+  display: inline-block;
+  font-weight: 500;
+}
+
+.media ul li:not(:last-child) {
+  padding-right: 60px;
+}
+
+.media a {
+  list-style: none;
+  color: #fff;
+  text-decoration: none;
+}
+.size {
+  position: absolute;
+  left: 150px;
+  bottom: 20px;
+}
+
+.size ul {
+  list-style: none;
+}
+
+.size ul li {
+  display: inline-block;
+  font-weight: 500;
+  border: 1px solid #fff;
+  padding: 5px;
+  border-radius: 50%;
+  margin-left: 10px;
+  height: 20px;
+  width: 20px;
+  text-align: center;
+  line-height: 1.5;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.size ul li:hover {
+  background: #fff;
+  color: #ff4b2b;
+}
+
+.size span {
+  font-weight: 500;
+}
+
+.size span::after {
+  display: inline-block;
+  content: "";
+  border: 0.5px solid #fff;
+  opacity: 0.5;
+  width: 50px;
+  margin: 0 0 0 10px;
+  transform: translateY(-4px);
+}
+
+.product-img {
+  width: 500px;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -40%);
+  animation: fly 4s ease-in-out infinite;
+}
+
+@keyframes fly {
+  0% {
+    transform: translate(-50%, -46%);
+  }
+  50% {
+    transform: translate(-50%, -54%);
+  }
+  100% {
+    transform: translate(-50%, -46%);
+  }
+}
+
+.product-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.product-title {
+  font-size: 100px;
+  text-shadow: 0 0 2px #ff4b2b, 0 0 2px #ff4b2b, 0 0 2px #ff4b2b,
+    0 0 2px #ff4b2b, 0 0 2px #ff4b2b, 0 0 2px #ff4b2b, 0 0 2px #ff4b2b,
+    0 0 2px #ff4b2b, 0 0 2px #ff4b2b, 0 0 2px #ff4b2b, 0 0 2px #ff4b2b,
+    0 0 2px #ff4b2b, 0 0 2px #ff4b2b, 0 0 2px #ff4b2b, 0 0 2px #ff4b2b,
+    0 0 2px #ff4b2b, 0 0 2px #ff4b2b, 0 0 2px #ff4b2b, 0 0 2px #ff4b2b,
+    0 0 2px #ff4b2b;
+}
+
+.product-subtitle {
+  font-size: 25px;
+  font-weight: 500;
+}
+
+.dots {
+  position: absolute;
+  top: 43%;
+  right: -25px;
+  transform: rotate(90deg);
+}
+
+.dot {
+  display: inline-block;
+  height: 7px;
+  width: 7px;
+  background: transparent;
+  border: 2px solid #ff4b2b;
+  border-radius: 50%;
+  margin: 0 18px;
+}
+
+.dot:first-child {
+  background: #ff4b2b;
+  margin-left: 0;
+}
+
+.bottomnav {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.bottomnav-img {
+  background: url("levi-shirt.jpg") no-repeat;
+  background-position: top;
+  background-size: cover;
+  width: 250px;
+  height: 150px;
+}
+
+.bottomnav ul {
+  list-style: none;
+}
+.bottomnav ul li {
+  display: inline-block;
+  padding: 10px 15px;
+  margin: 20px 20px 20px 0;
+  background: #ff4b2b;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.bottomnav ul li:hover {
+  background: #fff;
+  color: #ff4b2b;
+}
+
+/*  */
+html {
+  -webkit-font-smoothing: antialiased;
+}
+/* .simple-slider {
+  position: relative;
+  width: 304px;
+} */
+.simple-slider_item {
+  width: 500px;
+  max-width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 37%;
+  -webkit-transition: opacity 2s;
+  transition: opacity 2s;
+}
+.simple-slider_item .product-text {
+  z-index: 1000;
+}
+.is-hidden {
+  opacity: 0;
+  z-index: -1;
+}
+
+/*  */
+
+.fav {
+  color: #fff;
+  background: none;
+  border: none;
+  position: relative;
+  padding-left: 25px;
+  outline: none;
+  cursor: pointer;
+}
+
+.heart {
+  display: block;
+  position: absolute;
+  left: 0;
+  transform: translate(-50%, -50%) scale(0.7);
+  top: 50%;
+  pointer-events: none;
+  width: 100px;
+  height: 100px;
+  background: url("https://res.cloudinary.com/muhammederdem/image/upload/v1536405215/starwars/heart.png")
+    no-repeat;
+  background-position: 0 0;
+  cursor: pointer;
+  transition: background-position 1s steps(28);
+  transition-duration: 0s;
+}
+
+.h-is-active {
+  transition-duration: 1s;
+  background-position: -2800px 0;
+}
+
+.product-sliderfav {
+  color: #fff;
+  background: none;
+  border: none;
+  position: relative;
+  padding-left: 25px;
+  outline: none;
+  cursor: pointer;
+}
+
+.categories a {
+  text-decoration: none;
+  color: #ff4b2b;
+}
+
+.bag a {
+  text-decoration: none;
+  color: #ff4b2b;
+}
